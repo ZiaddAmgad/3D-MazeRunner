@@ -1090,7 +1090,7 @@ void RenderTeleport() {
 
 
 float dayCycleProgress = 0.0f;
-float dayCycleSpeed = 0.0001f; // Adjust this to control the speed of the day/night cycle
+float dayCycleSpeed = 0.0003f; // Adjust this to control the speed of the day/night cycle
 
 // Function to update the day cycle (call this in your main loop)
 void updateDayCycle(int value) {
@@ -1107,8 +1107,8 @@ void RenderSun() {
 	// Sun's vertical trajectory
 	float sunRadius = 150.0f; // Radius of the sun's orbit
 	float sunX = sunRadius * cos(dayCycleProgress * 2 * 3.14159f);
-	float sunY = 0.0f; // Vertical motion
-	float sunZ = sunRadius * sin(dayCycleProgress * 2 * 3.14159f); // Fixed Z position
+	float sunY = sunRadius * sin(dayCycleProgress * 2 * 3.14159f); // Vertical motion
+	float sunZ = 0.0f; // Fixed Z position
 
 	// Select texture and lighting based on day cycle
 	GLuint currentTexture;
